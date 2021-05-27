@@ -14,9 +14,7 @@ Object {
           type="text"
           value=""
         />
-        <button
-          disabled=""
-        >
+        <button>
           Add
         </button>
       </form>
@@ -32,9 +30,7 @@ Object {
         type="text"
         value=""
       />
-      <button
-        disabled=""
-      >
+      <button>
         Add
       </button>
     </form>

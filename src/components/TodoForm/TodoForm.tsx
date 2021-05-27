@@ -8,7 +8,7 @@ function TodoForm({addTodo}:{addTodo:(value:string)=>void}) {
   return (
     <form className="TodoForm">
       <input name="todoInput" type="text" placeholder='Add todo' onChange={onChange} value={value}/>
-      <button disabled={value.length >=0}onClick={
+      <button onClick={
         (e)=> {
           e.preventDefault()
           addTodo(value)
