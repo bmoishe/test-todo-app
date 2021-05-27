@@ -9,6 +9,13 @@ test('TodoList renders todos', () => {
   expect(container.textContent).toMatch('todo2')
   expect(container.textContent).toMatch('todo3')
 })
+test('Deletes todo is called when delete button is pressed', () => {
+  const {getByText} = render(<TodoList todos={todos}deleteTodo={deleteTodo}/>);
+  const secondTodo = getByText(/^todo2$/i)
+  const deleteButtonNode = secondTodo.querySelector('button')
+  deleteButtonNode.click()
+  expect(deleteTodo).toHaveBeenCalledTimes(1)
+})
 test('takes snapshot of Form', () => {
   const todoList = render(<TodoList todos={todos}deleteTodo={deleteTodo}/>);
   expect(todoList).toMatchSnapshot()

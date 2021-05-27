@@ -10,12 +10,7 @@ function App() {
       <header className="App-header">
        Todo List
       </header>
-      <TodoForm addTodo={(todoText) => {
-        const trimmedText = todoText.trim()
-        if (trimmedText.length > 0) {
-          addTodo(trimmedText)
-        }
-      }}/>
+      <TodoForm addTodo={(todoText) => {addTodo(todoText)}}/>
       <TodoList todos={todos} deleteTodo={deleteTodo}/>
     </div>
   );
